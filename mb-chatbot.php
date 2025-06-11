@@ -58,3 +58,17 @@ function mb_chatbot_generate_content($api, $topic, $tone, $style) {
     }
     // Add logic for other APIs (Google Gemini, OpenRouter.ai) here
 }
+
+// AJAX handler for content generation
+function mb_chatbot_ajax_generate_content() {
+    $topic = sanitize_text_field($_POST['topic']);
+    $tone = sanitize_text_field($_POST['tone']);
+    $style = sanitize_text_field($_POST['style']);
+    $api = 'openai'; // You can implement logic to switch between APIs
+
+    $content = mb_chatbot_generate_content($api, $topic, $tone, $style);
+    echo $content;
+    wp_die(); // Required to terminate immediately and return a proper response
+}
+add_action('wp_ajax_mb_chatbot_generate_content', 'mb_chatbot_ajax_generate_content');
+
