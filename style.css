@@ -1,0 +1,38 @@
+.mb-chatbot-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.mb-chatbot-container h1 {
+    text-align: center;
+}
+
+.mb-chatbot-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.mb-chatbot-container input,
+.mb-chatbot-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.mb-chatbot-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mb-chatbot-container button:hover {
+    background-color: #005177;
+}
